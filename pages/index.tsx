@@ -323,7 +323,6 @@ useEffect(() => {
             <div className="md:w-1/2">
               <div className="rounded-xl w-full h-64 md:h-80 overflow-hidden">
 
-import Image from "next/image";
 
 <Image
   src="/logo.png"
