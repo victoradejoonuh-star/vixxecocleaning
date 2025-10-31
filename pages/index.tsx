@@ -443,6 +443,100 @@ useEffect(() => {
   </div>
 </section>
 
+{/* Pricing Section with Animation */}
+<section className="py-16 bg-gray-50" id="pricing">
+  <div className="container mx-auto px-4">
+    <div className="text-center mb-12">
+      <h2 className="text-3xl md:text-4xl font-bold text-gray-800 mb-4">Our Pricing Plans</h2>
+      <p className="text-gray-600 max-w-2xl mx-auto">
+        We believe in fair, transparent pricing — tailored to the size of your space and the level of care required.
+        Every quote includes eco-friendly cleaning products and our trusted professional service.
+      </p>
+      <div className="w-20 h-1 bg-teal-600 mx-auto mt-4"></div>
+    </div>
+
+    {/* Animated Pricing Cards */}
+    <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
+      {[
+        {
+          title: "Home Cleaning",
+          desc: "For apartments and houses. Includes dusting, mopping, kitchen and bathroom cleaning.",
+          pricing: [
+            "• Standard clean: ₦25,000 – ₦35,000",
+            "• Deep clean: ₦70,000 – ₦90,000",
+            "• Upholstery / Carpet add-on: from ₦5,000",
+          ],
+          button: "Book Home Cleaning",
+        },
+        {
+          title: "Office & School Cleaning",
+          desc: "Keep your workspace and classrooms spotless and germ-free with flexible daily or weekly schedules.",
+          pricing: [
+            "• Weekly plan: ₦100,000 – ₦150,000 / month",
+            "• One-off service: ₦40,000 – ₦60,000",
+            "• Floor polishing & disinfection: from ₦15,000",
+          ],
+          button: "Book Office/School Cleaning",
+        },
+        {
+          title: "Outdoor & Facility Cleaning",
+          desc: "Cleaning for compound areas, driveways, walkways, and commercial outdoor environments.",
+          pricing: [
+            "• Basic outdoor clean: ₦30,000 – ₦50,000",
+            "• Full grounds service: from ₦80,000",
+            "• Road or car park cleaning: custom quote",
+          ],
+          button: "Get Custom Quote",
+        },
+      ].map((card, i) => (
+        <motion.div
+          key={i}
+          initial={{ opacity: 0, y: 40 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: i * 0.2 }}
+          className="bg-white rounded-2xl shadow-lg border border-teal-100 p-8 hover:shadow-xl transition"
+        >
+          <h3 className="text-2xl font-bold text-teal-700 mb-4">{card.title}</h3>
+          <p className="text-gray-600 mb-6">{card.desc}</p>
+          <ul className="text-gray-700 space-y-2 mb-6">
+            {card.pricing.map((line, idx) => (
+              <li key={idx}>{line}</li>
+            ))}
+          </ul>
+          <button
+            onClick={() =>
+              document.getElementById("booking-form")?.scrollIntoView({ behavior: "smooth" })
+            }
+            className="w-full bg-teal-600 text-white font-bold py-3 rounded-lg hover:bg-teal-700 transition"
+          >
+            {card.button}
+          </button>
+        </motion.div>
+      ))}
+    </div>
+
+    <motion.div
+      initial={{ opacity: 0, y: 30 }}
+      whileInView={{ opacity: 1, y: 0 }}
+      viewport={{ once: true }}
+      transition={{ duration: 0.6, delay: 0.8 }}
+      className="text-center mt-12"
+    >
+      <p className="text-gray-600 mb-4">
+        Need something special? We also offer post-construction, event clean-up, fumigation, and janitorial contracts.
+      </p>
+      <button
+        onClick={() => document.getElementById("booking-form")?.scrollIntoView({ behavior: "smooth" })}
+        className="bg-teal-700 text-white px-8 py-3 rounded-full font-bold hover:bg-teal-800 transition"
+      >
+        Request a Free Evaluation
+      </button>
+    </motion.div>
+  </div>
+</section>
+
+
       {/* Services Wizard Section */}
       <section className="py-16 bg-gray-50">
         <div className="container mx-auto px-4">
