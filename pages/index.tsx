@@ -332,6 +332,7 @@ useEffect(() => {
   priority
   placeholder="blur"
   blurDataURL="/small-placeholder.jpg"
+  className="rounded-3xl border-4 border-white shadow-lg"
 />
     alt="Vixx Eco Cleaning Logo"
     width={800}       // adjust width
