@@ -322,13 +322,22 @@ useEffect(() => {
           <div className="flex flex-col md:flex-row items-center gap-8">
             <div className="md:w-1/2">
               <div className="rounded-xl w-full h-64 md:h-80 overflow-hidden">
-  <Image
-    src="/logo.png"   // your file inside public/
+
+import Image from "next/image";
+
+<Image
+  src="/logo.png"
+  alt="Professional cleaning team"
+  width={1920}
+  height={1080}
+  priority
+  placeholder="blur"
+  blurDataURL="/small-placeholder.jpg"
+/>
     alt="Vixx Eco Cleaning Logo"
     width={800}       // adjust width
     height={600}      // adjust height
     className="w-full h-full object-cover"
-  />
 </div>
             </div>
             <div className="md:w-1/2">
