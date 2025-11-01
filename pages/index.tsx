@@ -338,16 +338,13 @@ useEffect(() => {
   src="/logo.png"
   alt="Professional cleaning team"
   width={1920}
-  height={1080}
+  height={1780}
   priority
   placeholder="blur"
   blurDataURL="/small-placeholder.jpg"
   className="rounded-3xl border-4 border-white shadow-lg"
 />
-    alt="Vixx Eco Cleaning Logo"
-    width={800}       // adjust width
-    height={600}      // adjust height
-    className="w-full h-full object-cover"
+  
 </div>
             </div>
             <div className="md:w-1/2">
